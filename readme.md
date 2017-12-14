@@ -101,15 +101,15 @@ Which should output the names of the backups that are available:
 
 7) To get a list of files that are included:
 
-    snebu-client listbackups --name zeus --datestamp 1389677695 |more
+    snebu-client listbackups --name zeus --date 1389677695 |more
 
 8) To restore a given file, pick one from the list generated in the step above, and:
 
-    snebu-client restore --name zeus --datestamp 1389677695 '/path/to/file'
+    snebu-client restore --name zeus --date 1389677695 '/path/to/file'
 
 Or, to restore a directory,
 
-    snebu-client restore --name zeus --datestamp 1389677695 '/path/to/directory/*'
+    snebu-client restore --name zeus --date 1389677695 '/path/to/directory/*'
 
 This will by default place the files starting in the directory you are currently sitting in.  So, if you are in /tmp, and restore /home/bob/resume.txt, it will be placed in /tmp/home/bob/resume.txt.  See the detailed documentation section for additional parameters, such as `-C` which will specify an alternate target directory, or `--graft` which will allow you to rename parts of the file path.
 
